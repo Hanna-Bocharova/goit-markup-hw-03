@@ -25,24 +25,61 @@ body {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .list {
   list-style: none;
   display: flex;
+  padding-left: 0;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
-/* header */
-
-.container {
+.section-header,
+.section-hero,
+.section-benefits,
+.section-activity,
+.section-team,
+.section-footer,
+.section-button {
   margin: 0 auto;
   max-width: 1170px;
-  width: 100%;
-  display: flex;
+  width: 1230px;
   align-content: center;
+  background-color: tomato;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.header-nav {
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* header */
+
+.section .header-nav {
   display: flex;
   align-items: center;
 }
@@ -124,7 +161,6 @@ body {
 }
 
 .hero-btn {
-  text-align: center;
   background-color: var(--color-accent);
 
   font-family: var(--font-family-primary);
@@ -136,6 +172,9 @@ body {
   border: none;
   padding: 10px 32px;
   cursor: pointer;
+
+  border-radius: 4px;
+  margin: avto;
 }
 
 .button .active {
@@ -154,7 +193,9 @@ body {
   line-height: 1.17;
   color: var(--color-secondary);
 }
-
+.benefits-caption {
+  display: none;
+}
 .benefits-title {
   color: var(--color-secondary);
   font-weight: 700;
@@ -163,9 +204,18 @@ body {
   text-transform: uppercase;
 }
 
+.benefits .list {
+  display: block;
+}
+
 .benefits-text {
   color: var(--color-primary);
   line-height: 1.71;
+}
+
+.section-benefits .list {
+  display: block;
+  display: flex;
 }
 
 /* activity */
@@ -226,6 +276,11 @@ body {
 
   padding: 6px 22px;
 }
+
+.button:last-child {
+  margin-right: 0;
+}
+
 .button:hover,
 .button:focus {
   background-color: var(--color-accent);
@@ -245,4 +300,16 @@ body {
 .projects-items {
   font-size: 16px;
   line-height: 1.88;
+}
+
+.section-button .project-list {
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: avto;
+  margin-right: 30 px;
+}
+
+.button-caption {
+  display: none;
 }
