@@ -33,7 +33,6 @@ body {
   display: flex;
   padding-left: 0;
   margin: 0;
-  flex-wrap: wrap;
 }
 
 .section-header,
@@ -47,7 +46,6 @@ body {
   max-width: 1170px;
   width: 1230px;
   align-content: center;
-  background-color: tomato;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -79,7 +77,8 @@ img {
 }
 /* header */
 
-.section .header-nav {
+.section-header .header-nav,
+.section-header .header-contakts-list {
   display: flex;
   align-items: center;
 }
@@ -105,11 +104,6 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--color-secondary);
-}
-
-.header-list,
-.header-contakts-list {
-  display: flex;
 }
 
 .header-contakts-list li,
@@ -141,6 +135,7 @@ img {
 }
 .header-contakts-list {
   margin: auto;
+  display: flex;
 }
 
 /* hero */
@@ -174,7 +169,7 @@ img {
   cursor: pointer;
 
   border-radius: 4px;
-  margin: avto;
+  margin-left: 500px;
 }
 
 .button .active {
@@ -222,17 +217,27 @@ img {
 
 /* team */
 
+.section-team {
+  background-color: var(--color-button);
+}
+
+.team-caption {
+  padding-bottom: 50px;
+  text-align: center;
+}
 .team-content {
   color: var(--color-secondary);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.19;
+  text-align: center;
 }
 
 .team-position {
   color: var(--color-primary);
   font-size: 16px;
   line-height: 1.19;
+  padding-left: 60px;
 }
 
 /* footer */
@@ -258,6 +263,10 @@ img {
 
 .footer .logo {
   color: var(--color-tertiary);
+
+  .section-footer {
+    display: ;
+  }
 }
 
 /* portfolio */
@@ -289,6 +298,10 @@ img {
 
 /* projects */
 
+.projects {
+  width: calc(100% / 3);
+}
+
 .projects-title {
   color: var(--color-secondary);
   font-size: 18px;
@@ -302,12 +315,11 @@ img {
   line-height: 1.88;
 }
 
-.section-button .project-list {
+.section-button .list {
   flex-wrap: wrap;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: avto;
-  margin-right: 30 px;
+  margin-left: 30px;
 }
 
 .button-caption {
