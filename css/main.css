@@ -298,10 +298,6 @@ img {
 
 /* projects */
 
-.projects {
-  width: calc((100%-60px) / 3);
-}
-
 .projects:nth-child(3n) {
   margin-right: 0;
 }
