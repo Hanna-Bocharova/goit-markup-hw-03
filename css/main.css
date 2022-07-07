@@ -43,13 +43,12 @@ body {
 .section-footer,
 .section-button { */
 
-.section {
-  margin: 0 auto;
-  max-width: 1170px;
+.container {
+  margin-left: auto;
+  margin-right: auto;
   width: 1200px;
-  align-content: center;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 html {
@@ -77,14 +76,22 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* header */
 
-.section-header .header-nav,
-.section-header .header-contakts-list {
+.section-header .header-nav {
   display: flex;
   align-items: center;
 }
 
+.section-header {
+  display: flex;
+}
 .logo {
   font-family: var(--font-family-logo);
   font-weight: 700;
@@ -111,16 +118,16 @@ img {
   color: var(--color-secondary);
 }
 
-.header-contakts-list li,
+.header-contakts-list a,
 .header-list li {
   display: block;
-  margin-right: 25px;
+  margin-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.header-list .header-link:last-child {
-  margin-right: 0;
+.header-contakts-link .header-link:not(last-child) {
+  margin-right: 50px;
 }
 
 .header-contakts-link {
@@ -143,18 +150,19 @@ img {
   display: flex;
 }
 
+.header-nav {
+  padding-left: 215px;
+}
+
 /* hero */
 
 .hero {
-  height: 600 px;
   background-color: var(--color-background);
-  width: 1600px;
-  margin: 0 auto;
 }
 
 .hero-title {
   padding-top: 200px;
-  margin-bottom: 30px;
+  padding-bottom: 200px;
 
   font-weight: 900;
   font-size: 44px;
@@ -207,9 +215,7 @@ img {
 .benefits-caption {
   display: none;
 }
-.list-benefits:not(last child) {
-  margin-right: 30px;
-}
+
 .benefits-title {
   color: var(--color-secondary);
   font-weight: 700;
@@ -227,7 +233,7 @@ img {
   display: flex;
 }
 
-.item:not(last child) {
+.item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -235,29 +241,18 @@ img {
   width: 270px;
 }
 
+.section-activity {
+  margin-top: -94px;
+}
+
 /* activity */
 
-.picture-activity:not(last child) {
+.picture-activity:not(:last-child) {
   margin-right: 30px;
-}
-
-.one-activity {
-  padding-left: 15px;
-}
-
-.three-activity {
-  padding-right: 15px;
-}
-.section-activity {
-  padding-top: 0;
 }
 
 .activity-caption {
   text-align: center;
-}
-
-.list-activity {
-  padding-right: 30px;
 }
 
 /* team */
@@ -285,7 +280,7 @@ img {
   text-align: center;
 
   margin-bottom: 10px;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
 .team-position {
@@ -308,6 +303,11 @@ img {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
+.content-effects {
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+
 /* footer */
 
 .footer-contakts-link {
@@ -327,6 +327,8 @@ img {
 
 .footer {
   background-color: var(--color-background);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .logo {
@@ -350,6 +352,7 @@ img {
   letter-spacing: 0.03em;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 
   padding: 6px 22px;
 }
@@ -366,26 +369,17 @@ img {
 
 /* projects */
 
-.section .section-projects {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15 px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-}
-
 .container-project {
   display: flex;
   flex-wrap: wrap;
 }
 
-.element-project:not(:nth-child(3n)) {
-  margin-right: 30px;
+.element-project:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
-.element-project:not(:nth-child(-n + 3n)) {
-  margin-bottom: 30px;
+.element-project:not(:nth-child(3n)) {
+  margin-right: 30px;
 }
 
 .element-project {
@@ -393,7 +387,6 @@ img {
   width: 370px;
   height: 404px;
   margin-bottom: 30px;
-  border: 1px solid rgba(238, 238, 238, 1);
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -405,15 +398,16 @@ img {
   letter-spacing: 0.06em;
 
   margin-bottom: 4px;
-  margin-top: 20px;
-  padding-left: 24px;
 }
 .projects-items {
   font-size: 16px;
   line-height: 1.88;
+  margin-bottom: 0;
+}
 
-  padding-left: 24px;
-  margin-top: 0;
+.projects-item {
+  padding: 20px 24px;
+  border: 1px solid rgba(238, 238, 238, 1);
 }
 
 .button-caption {
@@ -422,6 +416,7 @@ img {
 
 .button-list {
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .btn-list {
