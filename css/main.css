@@ -51,16 +51,6 @@ body {
   padding-right: 15px;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
 h1,
 h2,
 h3,
@@ -68,7 +58,7 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 img {
@@ -122,8 +112,6 @@ img {
 .header-list li {
   display: block;
   margin-right: 50px;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .header-contakts-link .header-link:not(last-child) {
@@ -146,30 +134,26 @@ img {
   margin-left: 93px;
 }
 .header-contakts-list {
-  margin: auto;
   display: flex;
-}
-
-.header-nav {
-  padding-left: 215px;
+  margin-left: auto;
 }
 
 /* hero */
 
 .hero {
   background-color: var(--color-background);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
-  padding-top: 200px;
-  padding-bottom: 200px;
-
   font-weight: 900;
   font-size: 44px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 1.36;
-  text-align: center;
+  margin-bottom: 30px;
 
   color: var(--color-tertiary);
 }
@@ -211,7 +195,9 @@ img {
   font-size: 36px;
   line-height: 1.17;
   color: var(--color-secondary);
+  margin-bottom: 50px;
 }
+
 .benefits-caption {
   display: none;
 }
@@ -222,6 +208,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .benefits-text {
@@ -259,8 +246,6 @@ img {
 
 .team {
   background-color: var(--color-button);
-  width: 1600px;
-  margin: auto;
 }
 
 .team-caption {
@@ -278,17 +263,13 @@ img {
   font-weight: 500;
   line-height: 1.19;
   text-align: center;
-
   margin-bottom: 10px;
-  margin-top: 30px;
 }
 
 .team-position {
   color: var(--color-primary);
   font-size: 16px;
   line-height: 1.19;
-
-  margin-bottom: 30px;
 }
 
 .list-team {
@@ -299,13 +280,14 @@ img {
   width: 270px;
   height: 368px;
   background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .content-effects {
-  box-sizing: border-box;
-  border-radius: 1px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* footer */
@@ -314,6 +296,10 @@ img {
   color: var(--color-tertiary);
   line-height: 1.71;
   font-style: normal;
+}
+
+.footer-menu:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-contakts-link:hover,
@@ -337,10 +323,15 @@ img {
 
 .footer-contakts-list {
   display: block;
+  margin-top: 20px;
 }
 
 /* portfolio */
 /* titles */
+
+.header {
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
 
 .button {
   font-family: var(--font-family-primary);
